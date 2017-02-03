@@ -22,8 +22,12 @@
         </div>
         <div ng-controller="listCtrl as list">
             <!-- Dùng cách alias để khi phát sinh nhiều dòng code, ta dễ dàng biết dummyData đó thuộc controller nào, khi dùng cách này ta ko dùng $scope khi code bên controller nữa mà chuyển sang dùng keyword this (xem file list.js) -->
+            <form class="form-inline well well-sm clearfix">
+                <span class="glyphicon glyphicon-search"></span>
+                <input type="text" placeholder="Search..." class="form-control" ng-model="list.search">
+            </form>
             <div class="row">
-                <div class="col-sm-6" ng-repeat="turtle in list.data">
+                <div class="col-sm-6" ng-repeat="turtle in list.data | filter:list.search">
                     <div class="well well-sm">
                         <div class="row">
                             <div class="col-md-6">
