@@ -5,20 +5,25 @@
         //Create controller
         .controller("listCtrl", ListController);
 
-    function ListController() {
+    ListController.$inject = ['quizMetrics']; //Another way to inject dependencies
+
+    function ListController(quizMetrics) {
         this.data = turtlesData; //Bind this keyword to its controller
         this.activeTurtle = {}; //Khởi tạo activeTurtle rỗng
         this.changeActiveTurtle = changeActiveTurtle; //Fired khi click
         this.search = "";
-        this.quizActive = false; //Khởi tạo quizActive cho click show/hide
+        // this.quizActive = false; //Khởi tạo quizActive cho click show/hide
         this.activateQuiz = activateQuiz; //Fired khi click
+        this.quizMetrics = quizMetrics;
 
         function changeActiveTurtle(index) {
             this.activeTurtle = index; //Set turtle được click tương ứng vào activeTurtle
         }
 
         function activateQuiz() {
-            this.quizActive = true;
+            // this.quizActive = true;
+            // this.quizMetrics.quizActive = true;
+            quizMetrics.changeState(true);
         }
     }
 

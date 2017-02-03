@@ -20,7 +20,7 @@
                 <strong>TURTLE QUIZ</strong>
             </h3>
         </div>
-        <div ng-controller="listCtrl as list" ng-hide="list.quizActive">
+        <div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive">
             <!-- Dùng cách alias để khi phát sinh nhiều dòng code, ta dễ dàng biết dummyData đó thuộc controller nào, khi dùng cách này ta ko dùng $scope khi code bên controller nữa mà chuyển sang dùng keyword this (xem file list.js) -->
             <form class="form-inline well well-sm clearfix">
                 <span class="glyphicon glyphicon-search"></span>
@@ -79,8 +79,8 @@
             </div>
         </div>
 
-        <div ng-controller="quizCtrl as quiz">
-            
+        <div ng-controller="quizCtrl as quiz" ng-show="quiz.quizMetrics.quizActive">
+            <h1>Quiz</h1>
         </div>
     </div>
     <!-- third party js -->
