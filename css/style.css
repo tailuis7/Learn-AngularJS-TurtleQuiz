@@ -1,19 +1,23 @@
-.well-image{
+.well-image {
     width: 100%;
     height: 162px;
 }
-.top-buffer{
+
+.top-buffer {
     margin-top: 30px;
 }
-.answer{
+
+.answer {
     padding: 15px 20px;
     border-radius: 10px;
     border: 1px solid #bbb;
 }
-.answer:hover{
+
+.answer:hover {
     cursor: pointer;
 }
-.image-answer{
+
+.image-answer {
     cursor: pointer;
     height: 350px;
     width: 100%;
@@ -21,16 +25,20 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.image-answer img{
+
+.image-answer img {
     width: 100%;
     height: auto;
 }
-.image-selected{
+
+.image-selected {
     border: 3px solid #56afdc;
 }
-.image-answer.bg-success{
+
+.image-answer.bg-success {
     border: 3px solid #5ea640;
 }
-.image-answer.bg-danger{
+
+.image-answer.bg-danger {
     border: 3px solid #b74848;
 }

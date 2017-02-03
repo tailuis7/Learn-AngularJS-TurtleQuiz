@@ -7,6 +7,12 @@
 
     function ListController() {
         this.data = turtlesData; //Bind this keyword to its controller
+        this.activeTurtle = {}; //Khởi tạo activeTurtle rỗng
+        this.changeActiveTurtle = changeActiveTurtle; //Fired khi click
+
+        function changeActiveTurtle(index) {
+            this.activeTurtle = index; //Set turtle được click tương ứng vào activeTurtle
+        }
     }
 
     var turtlesData = [{
