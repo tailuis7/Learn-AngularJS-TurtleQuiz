@@ -23,9 +23,26 @@
         </div>
 
         <div ng-controller="listCtrl as list"><!-- Dùng cách alias để khi phát sinh nhiều dòng code, ta dễ dàng biết dummyData đó thuộc controller nào, khi dùng cách này ta ko dùng $scope khi code bên controller nữa mà chuyển sang dùng keyword this (xem file list.js) -->
-            <p ng-repeat="turtle in list.data">
-                {{turtle}}
-            </p>
+            <div class="row">
+                <div class="col-sm-6" ng-repeat="turtle in list.data">
+                    <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Dùng ng-src trong angular thay vì src như thường, nếu dùng cách src thường sẽ bị báo lỗi not found -->
+                                <img ng-src="{{turtle.image_url}}" alt="" class="img-rounded img-responsive">
+                            </div>
+                            <div class="col-md-6">
+                                <h4>{{turtle.type}}</h4>
+                                <p><strong>Location: </strong>{{turtle.locations}}</p>
+                                <p><strong>Size: </strong>{{turtle.size}}</p>
+                                <p><strong>Average Lifespan:</strong>{{turtle.lifespan}}</p>
+                                <p><strong>Diet: </strong>{{turtle.diet}}</p>
+                                <button class="btn btn-primary pull-right">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
