@@ -22,8 +22,8 @@
             </h3>
         </div>
 
-        <div ng-controller="listCtrl">
-            {{5+6}}
+        <div ng-controller="listCtrl as list"><!-- Dùng cách alias để khi phát sinh nhiều dòng code, ta dễ dàng biết dummyData đó thuộc controller nào, khi dùng cách này ta ko dùng $scope khi code bên controller nữa mà chuyển sang dùng keyword this (xem file list.js) -->
+            {{list.dummyData}}
         </div>
     </div>
 

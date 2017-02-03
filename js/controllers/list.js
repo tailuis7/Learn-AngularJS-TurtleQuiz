@@ -6,6 +6,6 @@
         .controller("listCtrl", ListController);
 
     function ListController() {
-
+    	this.dummyData = "Hello World";//Bind this keyword to its controller
     }
 })();
