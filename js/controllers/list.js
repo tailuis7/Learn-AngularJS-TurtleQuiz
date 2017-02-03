@@ -23,7 +23,7 @@
         function activateQuiz() {
             // this.quizActive = true;
             // this.quizMetrics.quizActive = true;
-            quizMetrics.changeState(true);
+            quizMetrics.changeState(true); //Không dùng this keyword nữa vì vẫn nằm trong function ListController(quizMetrics), có thể nó sẽ tự hiểu quizMetrics được gán ở đây chính là quizMetrics nằm trong function ListController
         }
     }
 
